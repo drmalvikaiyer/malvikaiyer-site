@@ -20,7 +20,7 @@
 <meta name="twitter:image" content="https://malvikaiyer.com/assets/og-cover.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=9aac4e2a">
+<link rel="stylesheet" href="styles.css?v=b0b097c0">
 </head><body>
 
 <header class="nav"><div class="wrap">
@@ -310,7 +310,7 @@
   // offset anchor jumps so section headings aren't hidden under the sticky nav (esp. taller mobile nav)
   var navEl=document.querySelector('.nav');
   if(navEl){
-    var setSP=function(){ document.documentElement.style.scrollPaddingTop=Math.max(navEl.offsetHeight-40,0)+'px'; };
+    var setSP=function(){ document.documentElement.style.scrollPaddingTop=Math.max(navEl.offsetHeight-62,0)+'px'; };
     setSP(); window.addEventListener('resize', setSP); window.addEventListener('load', setSP);
   }
   // nav brand: hide while hero name is in view, fade in once it scrolls behind the nav
