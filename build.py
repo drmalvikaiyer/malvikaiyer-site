@@ -281,24 +281,24 @@ FRONT_JS = """<script>
     var ro=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');ro.unobserve(en.target);}});},{threshold:0.08});
     tg.forEach(function(el){ ro.observe(el); });
   }
-  // ---- staggered card cascade (honours) ----
+  // ---- legacy grid cascade (any .awards-grid) ----
   if('IntersectionObserver' in window && !reduce){
-    var grids=[].slice.call(document.querySelectorAll('.cards, .awards-grid'));
+    var grids=[].slice.call(document.querySelectorAll('.awards-grid'));
     grids.forEach(function(g){ g.classList.add('stagger'); });
     var so=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');so.unobserve(en.target);}});},{threshold:0.12});
     grids.forEach(function(g){ so.observe(g); });
   }
-  // ---- awards: each card makes its entrance as it scrolls into view (per-card) ----
+  // ---- honours + awards: each card makes its grand entrance as it scrolls into view (per-card) ----
   if('IntersectionObserver' in window && !reduce){
-    var aw=document.querySelector('.awards-spot');
-    if(aw){
-      aw.classList.add('stagger');
-      var ao=new IntersectionObserver(function(es){
+    [['.awards-spot','.award'],['.cards','.card']].forEach(function(pair){
+      var cont=document.querySelector(pair[0]); if(!cont) return;
+      cont.classList.add('stagger');
+      var io=new IntersectionObserver(function(es){
         var vis=es.filter(function(e){return e.isIntersecting;});
-        vis.forEach(function(e,k){ e.target.style.transitionDelay=(k*110)+'ms'; e.target.classList.add('in'); ao.unobserve(e.target); });
+        vis.forEach(function(e,k){ e.target.style.transitionDelay=(k*110)+'ms'; e.target.classList.add('in'); io.unobserve(e.target); });
       },{threshold:0.25, rootMargin:'0px 0px -6% 0px'});
-      [].slice.call(aw.querySelectorAll('.award')).forEach(function(c){ ao.observe(c); });
-    }
+      [].slice.call(cont.querySelectorAll(pair[1])).forEach(function(c){ io.observe(c); });
+    });
   }
   // offset anchor jumps so section headings aren't hidden under the sticky nav (esp. taller mobile nav)
   var navEl=document.querySelector('.nav');
