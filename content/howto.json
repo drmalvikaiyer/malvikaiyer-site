@@ -1,0 +1,27 @@
+{
+ "eyebrow": "How I Do It",
+ "heading": "Everyday life, without hands",
+ "lead": "From making a smoothie to everyday household tasks and walking tall in her leg braces — unedited glimpses of daily life, reimagined. Proof that resilience isn't a speech; it's a practice.",
+ "items": [
+  {
+   "youtube_id": "HQ703alAkVo",
+   "title": "Making a smoothie",
+   "thumb": "/assets/howp_HQ703alAkVo.jpg"
+  },
+  {
+   "youtube_id": "6zN9p5QSqLA",
+   "title": "Folding my clothes",
+   "thumb": "/assets/howp_6zN9p5QSqLA.jpg"
+  },
+  {
+   "youtube_id": "EuR2ORlvxBg",
+   "title": "Unloading the dishwasher",
+   "thumb": "/assets/howp_EuR2ORlvxBg.jpg"
+  },
+  {
+   "youtube_id": "sDWUfUSF-D4",
+   "title": "Rocking my leg braces",
+   "thumb": "/assets/howp_sDWUfUSF-D4.jpg"
+  }
+ ]
+}

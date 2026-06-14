@@ -1,0 +1,38 @@
+{
+ "eyebrow": "Let's Connect",
+ "heading": "Bring this story to your stage",
+ "lead": "For keynotes, panels, workshops and collaborations — reach out across any channel.",
+ "form_email": "drmalvikaiyer@gmail.com",
+ "social": [
+  {
+   "label": "Instagram",
+   "url": "https://www.instagram.com/malvika.iyer/",
+   "icon": "/assets/sic_img_47.png"
+  },
+  {
+   "label": "LinkedIn",
+   "url": "https://www.linkedin.com/in/drmalvikaiyer/",
+   "icon": "/assets/sic_img_48.png"
+  },
+  {
+   "label": "X / Twitter",
+   "url": "https://x.com/malvikaiyer",
+   "icon": "/assets/sic_img_49.png"
+  },
+  {
+   "label": "YouTube",
+   "url": "https://www.youtube.com/@MalvikaIyer/",
+   "icon": "/assets/sic_img_yt.png"
+  },
+  {
+   "label": "Google",
+   "url": "https://share.google/ptlNX6ZUBbarv43xF",
+   "icon": "/assets/sic_img_50.png"
+  },
+  {
+   "label": "Email",
+   "url": "mailto:drmalvikaiyer@gmail.com",
+   "icon": "/assets/sic_img_51.png"
+  }
+ ]
+}

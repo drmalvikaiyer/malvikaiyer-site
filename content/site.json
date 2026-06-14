@@ -1,0 +1,64 @@
+{
+ "title": "Dr. Malvika Iyer — Speaker · Activist · Changemaker",
+ "description": "Dr. Malvika Iyer — bomb-blast survivor, disability-rights activist, Doctorate in Social Work and internationally acclaimed motivational speaker.",
+ "brand_first": "Dr. Malvika ",
+ "brand_last": "Iyer",
+ "nav": [
+  {
+   "label": "Story",
+   "href": "#story",
+   "cta": false
+  },
+  {
+   "label": "Honours",
+   "href": "#honours",
+   "cta": false
+  },
+  {
+   "label": "Awards",
+   "href": "#awards",
+   "cta": false
+  },
+  {
+   "label": "On Stage",
+   "href": "#onstage",
+   "cta": false
+  },
+  {
+   "label": "Speaking",
+   "href": "#speaking",
+   "cta": false
+  },
+  {
+   "label": "Media",
+   "href": "#media",
+   "cta": false
+  },
+  {
+   "label": "Watch",
+   "href": "#interviews",
+   "cta": false
+  },
+  {
+   "label": "Life Lessons",
+   "href": "#learn",
+   "cta": false
+  },
+  {
+   "label": "How I Do It",
+   "href": "#howto",
+   "cta": false
+  },
+  {
+   "label": "Graphic Novel",
+   "href": "#books",
+   "cta": false
+  },
+  {
+   "label": "Connect",
+   "href": "#connect",
+   "cta": true
+  }
+ ],
+ "footer_html": "© Dr. <b>Malvika Iyer</b> · Inspiration · Activist · Changemaker · <b>malvikaiyer.com</b>"
+}

@@ -1,0 +1,353 @@
+# Visual editor configuration (Decap CMS) — edits content/*.json.
+# Auth: Netlify Identity + Git Gateway (one-time setup in EDITING.md).
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets"
+public_folder: "/assets"
+
+site_url: https://malvikaiyer.com
+display_url: https://malvikaiyer.com
+
+collections:
+  # ===== Site-wide =====
+  - name: site
+    label: "Site & Navigation"
+    files:
+      - name: site
+        label: "Site settings"
+        file: "content/site.json"
+        description: "Page title, browser/SEO description, brand name, top menu and footer."
+        fields:
+          - { name: title, label: "Browser title", widget: string }
+          - { name: description, label: "SEO description", widget: text }
+          - { name: brand_first, label: "Brand — first part", widget: string }
+          - { name: brand_last, label: "Brand — highlighted part", widget: string }
+          - name: nav
+            label: "Top menu"
+            widget: list
+            summary: "{{fields.label}}"
+            fields:
+              - { name: label, label: "Label", widget: string }
+              - { name: href, label: "Link (e.g. #honours)", widget: string }
+              - { name: cta, label: "Show as button?", widget: boolean, default: false, required: false }
+          - { name: footer_html, label: "Footer (HTML allowed)", widget: text }
+
+  - name: hero
+    label: "Hero (top banner)"
+    files:
+      - name: hero
+        label: "Hero"
+        file: "content/hero.json"
+        fields:
+          - { name: eyebrow, label: "Small label above name", widget: string }
+          - { name: name, label: "Name", widget: string }
+          - { name: sub_pre, label: "Subtitle (normal text)", widget: string }
+          - { name: sub_bold, label: "Subtitle (bold tail)", widget: string }
+          - { name: btn1_label, label: "Button 1 text", widget: string }
+          - { name: btn1_href, label: "Button 1 link", widget: string }
+          - { name: btn2_label, label: "Button 2 text", widget: string }
+          - { name: btn2_href, label: "Button 2 link", widget: string }
+          - { name: ribbon, label: "Ribbon tagline", widget: string }
+          - { name: photo, label: "Hero photo (fallback)", widget: image }
+
+  - name: carousel
+    label: "Hero photo carousel"
+    files:
+      - name: carousel
+        label: "Carousel images"
+        file: "content/carousel.json"
+        description: "The rotating photos in the hero frame. Add up to ~10. Replace these with your own speaking/stage photos anytime."
+        fields:
+          - { name: interval, label: "Seconds between slides (×1000, e.g. 3500)", widget: number, required: false }
+          - { name: images, label: "Photos", widget: list, field: { name: image, label: "Photo", widget: image } }
+
+  - name: onstage
+    label: "On Stage (sliding photos)"
+    files:
+      - name: onstage
+        label: "On Stage"
+        file: "content/onstage.json"
+        description: "The slowly-sliding band of speaking photos. Add/reorder your stage photos here."
+        fields:
+          - { name: eyebrow, label: "Small label", widget: string }
+          - { name: heading, label: "Heading", widget: string }
+          - { name: lead, label: "Intro line", widget: text }
+          - { name: images, label: "Photos", widget: list, field: { name: image, label: "Photo", widget: image } }
+
+  - name: stats
+    label: "Stats band"
+    files:
+      - name: stats
+        label: "Stats"
+        file: "content/stats.json"
+        fields:
+          - name: items
+            label: "Stats"
+            widget: list
+            summary: "{{fields.num}} {{fields.label}}"
+            fields:
+              - { name: num, label: "Number", widget: string }
+              - { name: label, label: "Label", widget: string }
+
+  # ===== Story / About =====
+  - name: about
+    label: "Story / About"
+    files:
+      - name: about
+        label: "Story"
+        file: "content/about.json"
+        fields:
+          - { name: eyebrow, label: "Small label", widget: string }
+          - { name: heading, label: "Heading", widget: string }
+          - { name: paragraphs, label: "Bio paragraphs", widget: list, field: { name: text, label: "Paragraph", widget: text } }
+          - { name: credentials, label: "Credential tags", widget: list, field: { name: tag, label: "Tag", widget: string } }
+          - name: education
+            label: "Education & qualifications"
+            widget: list
+            summary: "{{fields.degree}}"
+            fields:
+              - { name: degree, label: "Degree / qualification", widget: string }
+              - { name: place, label: "Institution / detail", widget: string }
+          - { name: roles_html, label: "Global roles (HTML allowed)", widget: text }
+
+  # ===== Honours =====
+  - name: honours
+    label: "Honours (Defining Moments)"
+    files:
+      - name: honours
+        label: "Honours"
+        file: "content/honours.json"
+        fields:
+          - { name: eyebrow, label: "Small label", widget: string }
+          - { name: heading, label: "Heading", widget: string }
+          - name: items
+            label: "Honour cards"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: "Title", widget: string }
+              - { name: description, label: "Description", widget: text }
+              - { name: link, label: "Link (optional)", widget: string, required: false }
+              - { name: image, label: "Photo", widget: image, required: false }
+              - { name: contain, label: "Show whole image (no crop)", widget: boolean, default: false, required: false }
+
+  # ===== Awards =====
+  - name: awards
+    label: "Awards & Recognition"
+    files:
+      - name: awards
+        label: "Awards"
+        file: "content/awards.json"
+        fields:
+          - { name: eyebrow, label: "Small label", widget: string }
+          - { name: heading, label: "Heading", widget: string }
+          - { name: lead, label: "Intro line", widget: text }
+          - name: items
+            label: "Awards"
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { name: name, label: "Award name", widget: string }
+              - { name: org, label: "Given by / detail", widget: string, required: false }
+              - { name: image, label: "Award photo", widget: image, required: false }
+
+  # ===== Speaking =====
+  - name: speaking
+    label: "Speaking (topics & engagements)"
+    files:
+      - name: speaking
+        label: "Speaking"
+        file: "content/speaking.json"
+        fields:
+          - { name: eyebrow, label: "Small label", widget: string }
+          - { name: heading, label: "Heading", widget: string }
+          - name: topics
+            label: "Topics (pills)"
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { name: name, label: "Topic", widget: string }
+          - name: regions
+            label: "Engagements by region"
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { name: name, label: "Region name", widget: string }
+              - { name: organisations, label: "Organisations (separate with ' · ')", widget: text }
+              - { name: wide, label: "Full-width card?", widget: boolean, default: false, required: false }
+          - { name: gallery, label: "Photo gallery", widget: list, field: { name: image, label: "Photo", widget: image } }
+
+  # ===== Watch =====
+  - name: videos
+    label: "Watch (videos)"
+    files:
+      - name: videos
+        label: "Videos"
+        file: "content/videos.json"
+        fields:
+          - { name: eyebrow, label: "Small label", widget: string }
+          - { name: heading, label: "Heading", widget: string }
+          - { name: lead, label: "Intro line", widget: text }
+          - name: items
+            label: "Videos"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: "Title", widget: string }
+              - { name: source, label: "Source (TEDx, UN, …)", widget: string }
+              - { name: youtube_id, label: "YouTube ID (after watch?v=)", widget: string, required: false }
+              - { name: url, label: "Full URL (if not YouTube)", widget: string, required: false }
+              - { name: thumb, label: "Thumbnail URL (optional)", widget: string, required: false }
+
+  # ===== In the Media (clippings) =====
+  - name: media
+    label: "In the Media (clippings)"
+    files:
+      - name: media
+        label: "Media clippings"
+        file: "content/media.json"
+        fields:
+          - { name: eyebrow, label: "Small label", widget: string }
+          - { name: heading, label: "Heading", widget: string }
+          - { name: lead, label: "Intro line", widget: text }
+          - name: items
+            label: "Clippings (image + link)"
+            widget: list
+            fields:
+              - { name: image, label: "Clipping image", widget: image }
+              - { name: title, label: "Article title", widget: string, required: false }
+              - { name: url, label: "Article link", widget: string }
+
+  # ===== Press archive =====
+  - name: press
+    label: "Press archive (by outlet)"
+    files:
+      - name: press
+        label: "Press archive"
+        file: "content/press.json"
+        fields:
+          - { name: eyebrow, label: "Small label", widget: string }
+          - { name: heading, label: "Heading", widget: string }
+          - { name: lead, label: "Intro line", widget: text }
+          - name: outlets
+            label: "Outlets"
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { name: name, label: "Outlet name", widget: string }
+              - name: links
+                label: "Articles"
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { name: title, label: "Title", widget: string }
+                  - { name: url, label: "Link", widget: string }
+
+  # ===== Books & MAI =====
+  - name: books
+    label: "Books & MAI novel"
+    files:
+      - name: books
+        label: "Books"
+        file: "content/books.json"
+        fields:
+          - { name: eyebrow, label: "Small label", widget: string }
+          - { name: heading, label: "Heading", widget: string }
+          - { name: mai_title, label: "MAI panel — title", widget: string }
+          - { name: mai_desc, label: "MAI panel — description", widget: text }
+          - name: mai_links
+            label: "MAI panel — links"
+            widget: list
+            summary: "{{fields.label}}"
+            fields:
+              - { name: label, label: "Label", widget: string }
+              - { name: url, label: "Link", widget: string }
+          - name: items
+            label: "Books"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: "Title", widget: string }
+              - { name: note, label: "Note", widget: string, required: false }
+              - { name: url, label: "Link", widget: string, required: false }
+
+  # ===== Blog videos =====
+  - name: blog
+    label: "Watch & Learn (blog)"
+    files:
+      - name: blog
+        label: "Blog videos"
+        file: "content/blog.json"
+        fields:
+          - { name: eyebrow, label: "Small label", widget: string }
+          - { name: heading, label: "Heading", widget: string }
+          - { name: lead, label: "Intro line", widget: text }
+          - name: items
+            label: "Videos"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: "Title", widget: string }
+              - { name: youtube_id, label: "YouTube ID", widget: string }
+
+  # ===== How I Do It (how-to Shorts) =====
+  - name: howto
+    label: "How I Do It (how-to videos)"
+    files:
+      - name: howto
+        label: "How-to videos"
+        file: "content/howto.json"
+        fields:
+          - { name: eyebrow, label: "Small label", widget: string }
+          - { name: heading, label: "Heading", widget: string }
+          - { name: lead, label: "Intro line", widget: text }
+          - name: items
+            label: "Videos"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: "Title", widget: string }
+              - { name: youtube_id, label: "YouTube ID", widget: string }
+
+  # ===== Testimonials =====
+  - name: testimonials
+    label: "Testimonials"
+    files:
+      - name: testimonials
+        label: "Testimonials"
+        file: "content/testimonials.json"
+        description: "Appears on the site only once you add at least one quote."
+        fields:
+          - { name: eyebrow, label: "Small label", widget: string }
+          - { name: heading, label: "Heading", widget: string }
+          - name: items
+            label: "Quotes"
+            widget: list
+            summary: "{{fields.author}}"
+            fields:
+              - { name: quote, label: "Quote", widget: text }
+              - { name: author, label: "Name", widget: string }
+              - { name: role, label: "Role / Organisation", widget: string, required: false }
+
+  # ===== Connect =====
+  - name: connect
+    label: "Connect (social & contact)"
+    files:
+      - name: connect
+        label: "Connect"
+        file: "content/connect.json"
+        fields:
+          - { name: eyebrow, label: "Small label", widget: string }
+          - { name: heading, label: "Heading", widget: string }
+          - { name: lead, label: "Intro line", widget: text }
+          - { name: form_email, label: "Enquiry email", widget: string }
+          - name: social
+            label: "Social links"
+            widget: list
+            summary: "{{fields.label}}"
+            fields:
+              - { name: label, label: "Label", widget: string }
+              - { name: url, label: "Link", widget: string }
+              - { name: icon, label: "Icon image", widget: image }

@@ -1,0 +1,63 @@
+{
+ "eyebrow": "Defining Moments",
+ "heading": "Honours that made history",
+ "lead": "Hers is not simply a story of survival; it is a bold redefinition of what becomes possible when courage meets purpose.",
+ "items": [
+  {
+   "title": "Nari Shakti Puraskar",
+   "description": "India's highest civilian honour for outstanding contribution to women's empowerment, conferred by the President of India.",
+   "link": "https://gulfnews.com/world/asia/india/how-a-grenade-blast-survivor-overcame-disability-to-inspire-change-1.2251764",
+   "image": "/assets/hon_president.jpg"
+  },
+  {
+   "title": "Address at the United Nations, New York, USA",
+   "description": "A motivational keynote at UN Headquarters that drew a standing ovation.",
+   "link": "https://www.unwomen.org/en/news/stories/2017/6/from-where-i-stand--malvika-iyer",
+   "image": "/assets/img_24.jpg",
+   "contain": true
+  },
+  {
+   "title": "Honoured by Dr. A. P. J. Abdul Kalam",
+   "description": "Personally recognised by the late President of India for topping Class 10 at the state level.",
+   "link": "https://www.rediff.com/getahead/report/achievers-malvika-iyers-amazing-story-of-grit/20140917.htm",
+   "image": "/assets/hon_kalam.jpg"
+  },
+  {
+   "title": "Took over the PM's social media",
+   "description": "Chosen as a Woman Achiever to take over the Prime Minister's accounts on Women's Day.",
+   "link": "https://www.narendramodi.in/know-about-dr-malvika-iyer-and-her-work-as-she-takes-over-Prime-minister-narendra-modi-s-social-media-accounts-548715",
+   "image": "/assets/hon_pm.jpg",
+   "contain": true
+  },
+  {
+   "title": "Chair, WEF – India Economic Summit",
+   "description": "Co-chaired alongside Union Cabinet Ministers and global business leaders.",
+   "link": "https://www.youtube.com/watch?v=-6kvVaiknpA",
+   "image": "/assets/hon_wef.jpg"
+  },
+  {
+   "title": "Invited speaker at the World Bank",
+   "description": "Addressed the International Day of Persons with Disabilities.",
+   "link": "https://x.com/worldbankgroup/status/1334225833892823040?s=46",
+   "image": "/assets/hon_worldbank.jpg"
+  },
+  {
+   "title": "Showstopper, Fashion Week Chennai",
+   "description": "Championing inclusive fashion on the runway.",
+   "link": "https://www.femina.in/trending/achievers/from-disability-to-this-ability-dr-malvika-iyer-is-an-inspiration-to-all-211213.html",
+   "image": "/assets/hero03.jpg"
+  },
+  {
+   "title": "100 Change Agents & Newsmakers of the Decade",
+   "description": "Named among the decade's most influential changemakers by Deccan Chronicle.",
+   "link": "https://www.instagram.com/p/DJNt5ogTziJ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+   "image": "/assets/hon_chronicle.jpg"
+  },
+  {
+   "title": "A PhD thesis, against all odds",
+   "description": "Having lost both hands, she typed her entire doctoral thesis using a bone protruding from her stump — an extraordinary feat of determination.",
+   "link": "https://www.theweek.in/webworld/features/society/bilateral-amputee-malvika-iyer-doctoral-thesis.html",
+   "image": "/assets/hon_phd.jpg"
+  }
+ ]
+}
