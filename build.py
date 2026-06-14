@@ -311,6 +311,21 @@ HTML = f'''<!DOCTYPE html>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(site["title"])}</title>
 <meta name="description" content="{attr(site["description"])}">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://malvikaiyer.com/">
+<meta property="og:site_name" content="Dr. Malvika Iyer">
+<meta property="og:title" content="{attr(site["title"])}">
+<meta property="og:description" content="{attr(site["description"])}">
+<meta property="og:image" content="https://malvikaiyer.com/assets/og-cover.jpg">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta property="og:image:alt" content="Dr. Malvika Iyer — Motivational Speaker, Activist and Changemaker">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{attr(site["title"])}">
+<meta name="twitter:description" content="{attr(site["description"])}">
+<meta name="twitter:image" content="https://malvikaiyer.com/assets/og-cover.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v={CSS_V}">
