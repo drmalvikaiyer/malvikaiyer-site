@@ -1,12 +1,12 @@
 {
- "eyebrow": "Inspiration · Activist · Changemaker",
- "name": "Dr. Malvika Iyer",
- "sub_pre": "Motivational Speaker · National Award Winner — honoured by the President of India · ",
- "sub_bold": "Doctorate in Social Work",
- "btn1_label": "Invite her to speak",
- "btn1_href": "#connect",
- "btn2_label": "Watch her speak",
- "btn2_href": "#interviews",
- "ribbon": "Bomb-blast survivor and bilateral amputee at 13 — now an award-winning global voice, motivating millions to never give up.",
- "photo": "/assets/img_00.jpg"
+  "sub_pre": "Motivational Speaker · National Award Winner — honoured by the President of India · ",
+  "sub_bold": "Doctorate in Social Work",
+  "eyebrow": "Inspiration · Activist · Changemaker",
+  "btn1_label": "Invite her to speak",
+  "name": "Dr. Malvika Iyer",
+  "btn2_label": "Watch her speak lol",
+  "photo": "/assets/img_00.jpg",
+  "btn2_href": "#interviews",
+  "btn1_href": "#connect",
+  "ribbon": "Bomb-blast survivor and bilateral amputee at 13 — now an award-winning global voice, motivating millions to never give up."
 }
