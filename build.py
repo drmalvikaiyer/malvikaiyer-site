@@ -283,7 +283,7 @@ FRONT_JS = """<script>
   }
   // ---- staggered card cascade (honours + awards) ----
   if('IntersectionObserver' in window && !reduce){
-    var grids=[].slice.call(document.querySelectorAll('.cards, .awards-grid'));
+    var grids=[].slice.call(document.querySelectorAll('.cards, .awards-grid, .awards-spot'));
     grids.forEach(function(g){ g.classList.add('stagger'); });
     var so=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');so.unobserve(en.target);}});},{threshold:0.12});
     grids.forEach(function(g){ so.observe(g); });

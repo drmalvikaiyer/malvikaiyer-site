@@ -20,7 +20,7 @@
 <meta name="twitter:image" content="https://malvikaiyer.com/assets/og-cover.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=b0b097c0">
+<link rel="stylesheet" href="styles.css?v=7b826d0d">
 </head><body>
 
 <header class="nav"><div class="wrap">
@@ -302,7 +302,7 @@
   }
   // ---- staggered card cascade (honours + awards) ----
   if('IntersectionObserver' in window && !reduce){
-    var grids=[].slice.call(document.querySelectorAll('.cards, .awards-grid'));
+    var grids=[].slice.call(document.querySelectorAll('.cards, .awards-grid, .awards-spot'));
     grids.forEach(function(g){ g.classList.add('stagger'); });
     var so=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');so.unobserve(en.target);}});},{threshold:0.12});
     grids.forEach(function(g){ so.observe(g); });
