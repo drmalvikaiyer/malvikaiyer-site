@@ -288,8 +288,14 @@ FRONT_JS = """<script>
     var so=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');so.unobserve(en.target);}});},{threshold:0.12});
     grids.forEach(function(g){ so.observe(g); });
   }
+  // offset anchor jumps so section headings aren't hidden under the sticky nav (esp. taller mobile nav)
+  var navEl=document.querySelector('.nav');
+  if(navEl){
+    var setSP=function(){ document.documentElement.style.scrollPaddingTop=(navEl.offsetHeight+16)+'px'; };
+    setSP(); window.addEventListener('resize', setSP); window.addEventListener('load', setSP);
+  }
   // nav brand: hide while hero name is in view, fade in once it scrolls behind the nav
-  var navEl=document.querySelector('.nav'), heroName=document.querySelector('.hero h1');
+  var heroName=document.querySelector('.hero h1');
   if(navEl && heroName){
     var updBrand=function(){
       var navH=navEl.offsetHeight;
