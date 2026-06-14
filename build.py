@@ -188,7 +188,7 @@ def onstage_rows():
     r1=onstage_cards(a); r2=onstage_cards(b)
     # duration scaled to card count; row 2 (reverse) eased a touch slower
     # because opposite-direction motion reads as faster to the eye
-    d1=len(a)*6; d2=round(len(b)*6.8)
+    d1=len(a)*4; d2=round(len(b)*4.5)
     return (f'<div class="marquee"><div class="track" style="animation-duration:{d1}s">{r1}{r1}</div></div>'
             f'<div class="marquee"><div class="track rev" style="animation-duration:{d2}s">{r2}{r2}</div></div>')
 
