@@ -161,6 +161,11 @@ img{display:block;max-width:100%}
 .cards.stagger.in .card,.awards-grid.stagger.in .award,.awards-spot.stagger.in .award{opacity:1;translate:0 0;
   transition:opacity .6s cubic-bezier(.2,.7,.25,1),translate .6s cubic-bezier(.2,.7,.25,1);
   transition-delay:calc(var(--d,0)*65ms)}
+/* awards: expressive bloom-in (fade + rise + gentle scale-up), plays on its own — no hover */
+.awards-spot.stagger .award{translate:0 28px;scale:.85}
+.awards-spot.stagger.in .award{translate:0 0;scale:1;
+  transition:opacity .7s cubic-bezier(.2,.75,.3,1),translate .7s cubic-bezier(.2,.75,.3,1),scale .7s cubic-bezier(.2,.75,.3,1);
+  transition-delay:calc(var(--d,0)*85ms)}
 .card .ph,.award .ph{transition:transform .5s cubic-bezier(.2,.7,.25,1)}
 .card:hover .ph{transform:scale(1.06)}
 .award:hover .ph{transform:scale(1.05)}
@@ -169,7 +174,7 @@ img{display:block;max-width:100%}
 .award{position:relative}
 .card h3 .hstar{display:inline-block;width:15px;height:15px;margin-right:7px;vertical-align:-2px;fill:var(--gold)}
 @media(prefers-reduced-motion:reduce){
-  .cards.stagger .card,.awards-grid.stagger .award,.awards-spot.stagger .award{opacity:1;translate:none}
+  .cards.stagger .card,.awards-grid.stagger .award,.awards-spot.stagger .award{opacity:1;translate:none;scale:none}
   .card:hover .ph,.award:hover .ph{transform:none}}
 
 /* ---- pill topics ---- */
