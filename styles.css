@@ -11,8 +11,8 @@
   --maxw:1080px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:92px}
-@media(max-width:560px){html{scroll-padding-top:185px}}
+html{scroll-behavior:smooth;scroll-padding-top:52px}
+@media(max-width:560px){html{scroll-padding-top:140px}}
 body{
   font-family:'Lora',-apple-system,Segoe UI,Roboto,sans-serif;
   color:var(--ink); background:var(--bg); line-height:1.6;

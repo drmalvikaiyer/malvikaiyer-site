@@ -291,7 +291,7 @@ FRONT_JS = """<script>
   // offset anchor jumps so section headings aren't hidden under the sticky nav (esp. taller mobile nav)
   var navEl=document.querySelector('.nav');
   if(navEl){
-    var setSP=function(){ document.documentElement.style.scrollPaddingTop=(navEl.offsetHeight+16)+'px'; };
+    var setSP=function(){ document.documentElement.style.scrollPaddingTop=Math.max(navEl.offsetHeight-40,0)+'px'; };
     setSP(); window.addEventListener('resize', setSP); window.addEventListener('load', setSP);
   }
   // nav brand: hide while hero name is in view, fade in once it scrolls behind the nav
