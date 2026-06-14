@@ -162,10 +162,12 @@ img{display:block;max-width:100%}
   transition:opacity .6s cubic-bezier(.2,.7,.25,1),translate .6s cubic-bezier(.2,.7,.25,1);
   transition-delay:calc(var(--d,0)*65ms)}
 /* awards: expressive bloom-in (fade + rise + gentle scale-up), plays on its own — no hover */
-.awards-spot.stagger .award{translate:0 38px;scale:.76}
-.awards-spot.stagger.in .award{translate:0 0;scale:1;
-  transition:opacity .8s cubic-bezier(.2,.8,.25,1),translate .8s cubic-bezier(.2,.8,.25,1),scale .8s cubic-bezier(.2,.8,.25,1);
-  transition-delay:calc(var(--d,0)*100ms)}
+.awards-spot.stagger .award{translate:0 46px;scale:.7;opacity:0}
+.awards-spot.stagger.in .award{translate:0 0;scale:1;opacity:1;
+  transition:opacity .5s ease-out,
+             translate .62s cubic-bezier(.34,1.5,.55,1),
+             scale .62s cubic-bezier(.34,1.5,.55,1);
+  transition-delay:calc(var(--d,0)*175ms)}
 .card .ph,.award .ph{transition:transform .5s cubic-bezier(.2,.7,.25,1)}
 .card:hover .ph{transform:scale(1.06)}
 .award:hover .ph{transform:scale(1.05)}
