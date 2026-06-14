@@ -1,6 +1,6 @@
 {
  "eyebrow": "Speaking & Global Reach",
- "heading": "On stages in 15+ countries 🌐",
+ "heading": "On stages in 15+ countries",
  "topics": [
   {
    "name": "Resilience"
@@ -41,27 +41,27 @@
  ],
  "regions": [
   {
-   "name": "North America 🌎",
+   "name": "North America",
    "wide": false,
    "organisations": "United Nations HQ · World Bank · Ford Motor Company · Austin Inclusion Summit (Applied Materials) · Pacific Northwest National Laboratory (US Dept. of Energy) · Boston Scientific · Phillips 66 · Bentley Systems · Zscaler · Marvell Semiconductor · Macy's · Reliability First · Paramount Software · Inner Science Institute · WE Canada"
   },
   {
-   "name": "South-East, East & West Asia 🌏",
+   "name": "South-East, East & West Asia",
    "wide": false,
    "organisations": "Tsangs Group (Hong Kong) · ICAI (Abu Dhabi, Bahrain, Doha, Muscat) · Indian Business & Professional Council (Dubai) · Critical River · Transworld · Global Leader Series for Non-Profits (Singapore) · Regional Dialogue on Accessible Elections (Indonesia) · Indian School Al Wadi Al Kabir (Muscat) · GEMS NM School (Dubai)"
   },
   {
-   "name": "Europe & Africa 🌍",
+   "name": "Europe & Africa",
    "wide": false,
    "organisations": "Unilever (UK) · The Royal Marsden NHS Foundation Trust (UK) · Reckitt Benckiser (Netherlands) · CIVICUS World Assembly (South Africa) · Sustainable Valley Festival (Norway) · Quantum Way Summit (France) · Africa Women Innovation & Entrepreneurship Forum"
   },
   {
-   "name": "Conferences & Forums 🌐",
+   "name": "Conferences & Forums",
    "wide": false,
    "organisations": "World Economic Forum India Economic Summit · Youth Assembly, NYU · UN India & NITI Aayog Women Entrepreneurship Program · IEEE WIE International Leadership Summit · The New Indian Express ThinkEdu Conclave · TEDxIIMKozhikode · TEDxYouthChennai · Mathrubhumi International Festival of Letters · South India's Iconic Women Summit"
   },
   {
-   "name": "South Asia (India) 🌏",
+   "name": "South Asia (India)",
    "wide": true,
    "organisations": "Microsoft · IBM · Shell · General Electric · Citi · PayPal · Atlassian · ByteDance · Volvo · John Deere · Bosch · Nokia · Morgan Stanley · Tesco · Diageo · Novo Nordisk · Target · Capgemini · Freshworks · Societe Generale · AXA · HPE Aruba · General Mills · Sandvik · Technicolor · Flex · CGI · VFS Global · Aristocrat · Suez · Amagi · Avantor · Aptiv · Indian Oil · Aditya Birla Capital · Bharat Electricals · United Breweries · J K Cements · SBI Insurance · CII · NASSCOM · Myntra · Gujarat Fluorochemicals · Valtech · Celegence · Mann+Hummel · CloudiX · IIRIS · Neewee Analytics · Harnessio R&D · Inflobox · Ask Circle · Construction Specialists · Unifeeder · PMI Chennai · Gerson Lehrman Group · RTI International · Mahindra University · Amrita Vishwa Vidyapeetham · The Shri Ram Schools · The Emerald Heights International School · Learning Matters"
   }
