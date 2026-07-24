@@ -4,7 +4,7 @@ backend:
   name: git-gateway
   repo: drmalvikaiyer/malvikaiyer-site
   branch: main
-  base_url: https://auth.decapbridge.com
+  identity_url: https://auth.decapbridge.com
 media_folder: "assets"
 public_folder: "/assets"
 
