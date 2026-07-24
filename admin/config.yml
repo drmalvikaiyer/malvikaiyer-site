@@ -1,10 +1,10 @@
 # Visual editor configuration (Decap CMS) — edits content/*.json.
 # Auth: Netlify Identity + Git Gateway (one-time setup in EDITING.md).
 backend:
-  name: github
+  name: git-gateway
   repo: drmalvikaiyer/malvikaiyer-site
   branch: main
-  base_url: https://decap-cms-oauth-provider-node.vercel.app
+  base_url: https://auth.decapbridge.com
 media_folder: "assets"
 public_folder: "/assets"
 
