@@ -4,6 +4,11 @@ backend:
   name: git-gateway
   repo: drmalvikaiyer/malvikaiyer-site
   branch: main
+  auth_type: pkce
+  base_url: https://auth.decapbridge.com
+  auth_endpoint: /sites/da82273c-6545-4e7f-9eaf-2ebbff6ecc00/pkce
+  auth_token_endpoint: /sites/da82273c-6545-4e7f-9eaf-2ebbff6ecc00/token
+  gateway_url: https://gateway.decapbridge.com
 media_folder: "assets"
 public_folder: "/assets"
 
